@@ -4,14 +4,16 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" href="style.css">  
-    <title>Soccer World</title>  
+    <title>Soccer World - Your Ultimate Soccer Destination</title>  
+    <meta name="description" content="Explore the latest teams, reviews, and updates in the world of soccer at Soccer World!">  
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>  
 <body>  
     <header>  
         <h1>Welcome to Soccer World</h1>  
         <nav>  
             <ul>  
-                <li><a href="home.html">Home</a></li>  
+                <li><a href="index.html">Home</a></li>  
                 <li><a href="teams.html">Teams</a></li>  
                 <li><a href="reviews.html">Reviews</a></li>  
             </ul>  
@@ -19,14 +21,27 @@
     </header>  
 
     <main>  
-        <h2>Featured Teams</h2>  
-        <div id="teams-list"></div>  
+        <section id="intro-section">  
+            <h2>Your Go-To Destination for All Things Soccer!</h2>  
+            <p>Join us as we explore the latest in soccer, from your favorite teams to exciting reviews. Dive into the game!</p>  
+            <img src="path/to/soccer-image.jpg" alt="Exciting Soccer Match" width="600" />  <!-- Add an image related to soccer -->
+        </section>
+
+        <section id="featured-teams">  
+            <h2>Featured Teams</h2>  
+            <div id="teams-list">Loading teams...</div> <!-- This will be populated by your JavaScript -->
+        </section>  
     </main>  
 
     <footer>  
-        <p>&copy; 2023 Soccer World</p>  
+        <p>© 2023 Soccer World. All Rights Reserved.</p>  
+        <ul class="social-media">  
+            <li><a href="https://www.facebook.com/SoccerWorld" target="_blank" aria-label="Facebook">Facebook</a></li>  
+            <li><a href="https://www.twitter.com/SoccerWorld" target="_blank" aria-label="Twitter">Twitter</a></li>  
+            <li><a href="https://www.instagram.com/SoccerWorld" target="_blank" aria-label="Instagram">Instagram</a></li>  
+        </ul>  
     </footer>  
 
     <script src="app.js"></script>  
 </body>  
-</html>  
+</html>
