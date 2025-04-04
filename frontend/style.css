@@ -15,6 +15,7 @@ header {
 nav ul {  
     list-style: none;  
     padding: 0;  
+    margin: 0;  
 }  
 
 nav ul li {  
@@ -25,10 +26,23 @@ nav ul li {
 nav a {  
     color: #ffffff;  
     text-decoration: none;  
+    transition: color 0.3s;  /* Smooth color transition on hover */  
+}  
+
+nav a:hover {  /* Hover effect for navigation links */  
+    color: #f4f4f4;  
 }  
 
 main {  
     margin: 20px;  
+    background: #ffffff;  
+    border-radius: 8px;  /* Rounded corners for main content */  
+    padding: 20px;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */  
+}  
+
+section {  
+    margin-bottom: 20px;  
 }  
 
 footer {  
@@ -36,7 +50,39 @@ footer {
     padding: 20px 0;  
     background: #35424a;  
     color: #ffffff;  
-    position: absolute;  
-    bottom: 0;  
-    width: 100%;  
 }  
+
+.social-media {  
+    list-style: none;  
+    padding: 0;  
+    display: inline-block;  
+    margin-top: 10px;  
+}  
+
+.social-media li {  
+    display: inline;  
+    margin: 0 10px;  
+}  
+
+footer a {  
+    color: #ffffff;  
+    text-decoration: none;  
+    transition: color 0.3s;  
+}  
+
+footer a:hover {  
+    color: #f4f4f4;  
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {  
+    nav ul li {  
+        display: block;  
+        margin: 10px 0;  
+    }  
+
+    main {  
+        margin: 10px;  
+    }  
+}
