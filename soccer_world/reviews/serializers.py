@@ -4,5 +4,5 @@ from .models import Review
 class ReviewSerializer(serializers.ModelSerializer):  
     class Meta:  
         model = Review  
-        fields = ['id', 'team', 'user', 'rating', 'comment']  
+        fields = ['id', 'team', 'user', 'rating', 'comment', 'created_at']
         read_only_fields = ['user']  # Prevent user from being set via the API directly  
