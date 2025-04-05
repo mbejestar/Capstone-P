@@ -5,6 +5,9 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response  
 from rest_framework.authtoken.views import ObtainAuthToken  
 from rest_framework.authtoken.serializers import AuthTokenSerializer  
+from .serializers import UserSerializer   
+from rest_framework import permissions, generics  
+from rest_framework.authtoken.models import Token  
 
 class RegisterView(generics.CreateAPIView):  
     queryset = User.objects.all()  
