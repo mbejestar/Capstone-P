@@ -21,7 +21,7 @@ class TeamStatisticsView(views.APIView):
 class TeamViewSet(viewsets.ModelViewSet):  
     queryset = Team.objects.all()  
     serializer_class = TeamSerializer  
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]  
+    permission_classes = [permissions.AllowAny]  
 
     @ratelimit(key='ip', rate='5/m', method='ALL', block=True)  
     def list(self, request, *args, **kwargs):  
