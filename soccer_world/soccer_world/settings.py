@@ -42,15 +42,19 @@ INSTALLED_APPS = [
     'users',  
     'teams',  
     'reviews',
+
+    'corsheaders',
 ]
 
+# CORS_ALLOW_CREDENTIALS = True
 
 REST_FRAMEWORK = {  
     'DEFAULT_AUTHENTICATION_CLASSES': [  
         'rest_framework.authentication.TokenAuthentication',  
+        'rest_framework.authentication.SessionAuthentication',  # Add this for browsable API
     ],  
     'DEFAULT_PERMISSION_CLASSES': [  
-        'rest_framework.permissions.IsAuthenticated',  
+        'rest_framework.permissions.AllowAny',  # Change this back to IsAuthenticated
     ],  
 }  
 
@@ -62,6 +66,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500",  # Update this with your frontend URL
 ]
 
 ROOT_URLCONF = 'soccer_world.urls'
